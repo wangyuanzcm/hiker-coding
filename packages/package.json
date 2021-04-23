@@ -1,0 +1,21 @@
+{
+  "name": "packages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nlpjs/core": "^4.22.0",
+    "@nlpjs/lang-en-min": "^4.22.0",
+    "@nlpjs/lang-zh": "^4.22.0",
+    "@nlpjs/nlp": "^4.22.0",
+    "@nlpjs/request-rn": "^4.21.1",
+    "browserify": "^17.0.0",
+    "terser": "^5.6.1"
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./libgif.js"></script>
+    <script type="text/javascript" src="./rubbable.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1>Example with controls and no auto-play</h1>
+        <img id="example1" src="./animation.gif" rel:auto_play="0" width="1024" height="600" />
+        <br>
+        <script type="text/javascript">
+            var sup1 = new SuperGif({ gif: document.getElementById('example1') });
+            let newSuperGif = new Proxy(sup1, {
+                get: function (target, property, receiver) {
+                    console.log(target, 'target')
+                    console.log(property, 'property')
+                    return target[property]
+                },
+                apply: function (target, thisArg, argumentsList) {
+                    console.log(thisArg,"thisArg");
+                    console.log(argumentsList,'argumentsList')
+                }
+            })
+
+            newSuperGif.load();
+            const cavas = newSuperGif.get_canvas();
+
+            console.log(typeof exports ,'define')
+        </script>
+        <a href="javascript:;" onmousedown="newSuperGif.pause(); return false;">Pause</a> |
+        <a href="javascript:;" onmousedown="newSuperGif.play(); return false;">Play</a> |
+        <a href="javascript:;" onmousedown="newSuperGif.move_to(0); return false;">Restart</a> |
+        <a href="javascript:;" onmousedown="newSuperGif.move_relative(1); return false;">Step forward</a> |
+        <a href="javascript:;" onmousedown="newSuperGif.move_relative(-1); return false;">Step back</a>
+    </center>
+
+
+</body>
+
+</html>
