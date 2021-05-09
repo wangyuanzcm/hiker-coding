@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/wangyuanzcm/hiker-coding#readme",
   "devDependencies": {
+    "json-server": "^0.16.3",
     "lerna": "^4.0.0",
     "leven": "^3.1.0"
   },

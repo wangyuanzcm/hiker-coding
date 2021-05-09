@@ -48,7 +48,7 @@
         };
 
         (async () => {
-            const nlp = await setupNLP('https://raw.githubusercontent.com/jesus-seijas-sp/nlpjs-examples/master/01.quickstart/02.filecorpus/corpus-en.json');
+            const nlp = await setupNLP('http://localhost:3000/profile');
             const chatForm = document.getElementById('chatbotForm');
             chatForm.addEventListener('submit', onChatSubmit(nlp));
         })();
