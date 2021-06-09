@@ -36,7 +36,13 @@ module.exports = class extends Generator {
         type: "list",
         choices: ["Typescript", "Javascript"],
         name: "language",
-        default: "Typescript"
+        default: "Javascript"
+      },
+      {
+        type: "list",
+        choices: [{name:"React Hooks",value:"hooks"},{name:"Tools Function",value:"tools"},{name:"leetcode",value:"leetcode"}],
+        name: "type",
+        default: "leetcode"
       },
       {
         type: "input",
@@ -61,17 +67,18 @@ module.exports = class extends Generator {
     ]);
 
     this.leetcodeName = answers.name;
-    this.language = answers.language;
+    // this.language = answers.language;
     this.description = answers.description;
     this.informations = answers.informations;
+    this.type = answers.type;
   }
 
   writing() {
     const extension = this.language === "Typescript" ? 'ts' : 'js';
 
     this.fs.copyTpl(
-      this.templatePath(`case.${extension}`),
-      this.destinationPath(`src/${this.leetcodeName}.${extension}`),
+      this.templatePath(`${this.type}.case.${extension}`),
+      this.destinationPath(`src/${this.type}/${this.leetcodeName}.${extension}`),
       {
         informations:this.informations,
         description: this.description,
@@ -80,8 +87,8 @@ module.exports = class extends Generator {
       }
     );
     this.fs.copyTpl(
-      this.templatePath(`testcase.${extension}`),
-      this.destinationPath(`tests/${this.leetcodeName}.spec.${extension}`),
+      this.templatePath(`${this.type}.testcase.${extension}`),
+      this.destinationPath(`tests/${this.type}/${this.leetcodeName}.spec.${extension}`),
       {
         description: this.description,
         funcName: camelcase(this.leetcodeName),

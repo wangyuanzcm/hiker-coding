@@ -1,6 +1,7 @@
-const <%= funcName %> = require('../src/<%= caseName %>');
+import <%= funcName %> import '../../src/leetcode/<%= caseName %>';
 
 describe('<%= funcName %>:<%= description %>', () => {
+
     const cases = [
         {
             inputs: [],

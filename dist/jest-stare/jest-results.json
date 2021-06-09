@@ -1,14 +1,14 @@
 {
   "numFailedTestSuites": 0,
   "numFailedTests": 0,
-  "numPassedTestSuites": 2,
-  "numPassedTests": 4,
+  "numPassedTestSuites": 4,
+  "numPassedTests": 9,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
-  "numTotalTestSuites": 2,
-  "numTotalTests": 4,
+  "numTotalTestSuites": 4,
+  "numTotalTests": 9,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,21 +26,21 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1623219803825,
+  "startTime": 1623233990167,
   "success": false,
   "testResults": [
     {
       "leaks": false,
       "numFailingTests": 0,
-      "numPassingTests": 3,
+      "numPassingTests": 2,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1623219804407,
-        "runtime": 430,
-        "slow": false,
-        "start": 1623219803977
+        "end": 1623233997319,
+        "runtime": 6630,
+        "slow": true,
+        "start": 1623233990689
       },
       "skipped": false,
       "snapshot": {
@@ -52,13 +52,111 @@
         "unmatched": 0,
         "updated": 0
       },
-      "testFilePath": "/Users/wangyuan/Desktop/hiker-coding/tests/isRotateEqual.spec.js",
+      "testFilePath": "/Users/wangyuan/Desktop/hiker-coding/tests/hooks/useDeepCompareEffect.spec.js",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "useDeepCompareEffect:react对对象进行深比较"
+          ],
+          "duration": 108,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useDeepCompareEffect:react对对象进行深比较 should run provided object once",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "should run provided object once"
+        },
+        {
+          "ancestorTitles": [
+            "useDeepCompareEffect:react对对象进行深比较"
+          ],
+          "duration": 2,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "useDeepCompareEffect:react对对象进行深比较 should run clean-up provided on unmount",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "should run clean-up provided on unmount"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 1,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1623233997529,
+        "runtime": 6795,
+        "slow": true,
+        "start": 1623233990734
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/Users/wangyuan/Desktop/hiker-coding/tests/leetcode/unionAndIntersect.spec.js",
+      "testResults": [
+        {
+          "ancestorTitles": [
+            "unionAndIntersect:两个有序整数数组，数组中可能会有重复数字，求两个数组的交集和并集，要求交集和并集中没有重复数字"
+          ],
+          "duration": 3,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "unionAndIntersect:两个有序整数数组，数组中可能会有重复数字，求两个数组的交集和并集，要求交集和并集中没有重复数字 unionAndIntersect:inputs is [[Array], [Array]],result should be [[Array], [Array]]",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "unionAndIntersect:inputs is [[Array], [Array]],result should be [[Array], [Array]]"
+        }
+      ],
+      "failureMessage": null
+    },
+    {
+      "leaks": false,
+      "numFailingTests": 0,
+      "numPassingTests": 3,
+      "numPendingTests": 0,
+      "numTodoTests": 0,
+      "openHandles": [],
+      "perfStats": {
+        "end": 1623233997644,
+        "runtime": 192,
+        "slow": false,
+        "start": 1623233997452
+      },
+      "skipped": false,
+      "snapshot": {
+        "added": 0,
+        "fileDeleted": false,
+        "matched": 0,
+        "unchecked": 0,
+        "uncheckedKeys": [],
+        "unmatched": 0,
+        "updated": 0
+      },
+      "testFilePath": "/Users/wangyuan/Desktop/hiker-coding/tests/leetcode/isRotateEqual.spec.js",
       "testResults": [
         {
           "ancestorTitles": [
             "isRotateEqual:算法：给你一个纯数字字符串，判断旋转180度之后是否和自己相等"
           ],
-          "duration": 1,
+          "duration": 7,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "isRotateEqual:算法：给你一个纯数字字符串，判断旋转180度之后是否和自己相等 isRotateEqual:inputs is [\"121\"],result should be false",
@@ -102,15 +200,15 @@
     {
       "leaks": false,
       "numFailingTests": 0,
-      "numPassingTests": 1,
+      "numPassingTests": 3,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1623219804545,
-        "runtime": 96,
-        "slow": false,
-        "start": 1623219804449
+        "end": 1623233997792,
+        "runtime": 7106,
+        "slow": true,
+        "start": 1623233990686
       },
       "skipped": false,
       "snapshot": {
@@ -122,710 +220,53 @@
         "unmatched": 0,
         "updated": 0
       },
-      "testFilePath": "/Users/wangyuan/Desktop/hiker-coding/tests/unionAndIntersect.spec.js",
+      "testFilePath": "/Users/wangyuan/Desktop/hiker-coding/tests/leetcode/isHappy.spec.js",
       "testResults": [
         {
           "ancestorTitles": [
-            "unionAndIntersect:两个有序整数数组，数组中可能会有重复数字，求两个数组的交集和并集，要求交集和并集中没有重复数字"
+            "isHappy:编写一个算法来判断一个数 n 是不是快乐数。"
           ],
-          "duration": 1,
+          "duration": 15,
           "failureDetails": [],
           "failureMessages": [],
-          "fullName": "unionAndIntersect:两个有序整数数组，数组中可能会有重复数字，求两个数组的交集和并集，要求交集和并集中没有重复数字 unionAndIntersect:inputs is [[Array], [Array]],result should be [[Array], [Array]]",
+          "fullName": "isHappy:编写一个算法来判断一个数 n 是不是快乐数。 isHappy:inputs is [11],result should be false",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 0,
           "status": "passed",
-          "title": "unionAndIntersect:inputs is [[Array], [Array]],result should be [[Array], [Array]]"
+          "title": "isHappy:inputs is [11],result should be false"
+        },
+        {
+          "ancestorTitles": [
+            "isHappy:编写一个算法来判断一个数 n 是不是快乐数。"
+          ],
+          "duration": 1,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "isHappy:编写一个算法来判断一个数 n 是不是快乐数。 isHappy:inputs is [19],result should be true",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "isHappy:inputs is [19],result should be true"
+        },
+        {
+          "ancestorTitles": [
+            "isHappy:编写一个算法来判断一个数 n 是不是快乐数。"
+          ],
+          "duration": 5,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "isHappy:编写一个算法来判断一个数 n 是不是快乐数。 isHappy:inputs is [2],result should be false",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 0,
+          "status": "passed",
+          "title": "isHappy:inputs is [2],result should be false"
         }
       ],
       "failureMessage": null
     }
   ],
-  "wasInterrupted": false,
-  "coverageMap": {
-    "/Users/wangyuan/Desktop/hiker-coding/src/isRotateEqual.js": {
-      "path": "/Users/wangyuan/Desktop/hiker-coding/src/isRotateEqual.js",
-      "statementMap": {
-        "0": {
-          "start": {
-            "line": 5,
-            "column": 20
-          },
-          "end": {
-            "line": 18,
-            "column": 1
-          }
-        },
-        "1": {
-          "start": {
-            "line": 6,
-            "column": 14
-          },
-          "end": {
-            "line": 11,
-            "column": 20
-          }
-        },
-        "2": {
-          "start": {
-            "line": 12,
-            "column": 4
-          },
-          "end": {
-            "line": 16,
-            "column": 5
-          }
-        },
-        "3": {
-          "start": {
-            "line": 12,
-            "column": 17
-          },
-          "end": {
-            "line": 12,
-            "column": 18
-          }
-        },
-        "4": {
-          "start": {
-            "line": 12,
-            "column": 26
-          },
-          "end": {
-            "line": 12,
-            "column": 36
-          }
-        },
-        "5": {
-          "start": {
-            "line": 13,
-            "column": 8
-          },
-          "end": {
-            "line": 15,
-            "column": 9
-          }
-        },
-        "6": {
-          "start": {
-            "line": 14,
-            "column": 12
-          },
-          "end": {
-            "line": 14,
-            "column": 25
-          }
-        },
-        "7": {
-          "start": {
-            "line": 17,
-            "column": 4
-          },
-          "end": {
-            "line": 17,
-            "column": 16
-          }
-        },
-        "8": {
-          "start": {
-            "line": 20,
-            "column": 0
-          },
-          "end": {
-            "line": 20,
-            "column": 31
-          }
-        }
-      },
-      "fnMap": {
-        "0": {
-          "name": "(anonymous_0)",
-          "decl": {
-            "start": {
-              "line": 5,
-              "column": 20
-            },
-            "end": {
-              "line": 5,
-              "column": 21
-            }
-          },
-          "loc": {
-            "start": {
-              "line": 5,
-              "column": 35
-            },
-            "end": {
-              "line": 18,
-              "column": 1
-            }
-          },
-          "line": 5
-        }
-      },
-      "branchMap": {
-        "0": {
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 8
-            },
-            "end": {
-              "line": 15,
-              "column": 9
-            }
-          },
-          "type": "if",
-          "locations": [
-            {
-              "start": {
-                "line": 13,
-                "column": 8
-              },
-              "end": {
-                "line": 15,
-                "column": 9
-              }
-            },
-            {
-              "start": {
-                "line": 13,
-                "column": 8
-              },
-              "end": {
-                "line": 15,
-                "column": 9
-              }
-            }
-          ],
-          "line": 13
-        },
-        "1": {
-          "loc": {
-            "start": {
-              "line": 13,
-              "column": 12
-            },
-            "end": {
-              "line": 13,
-              "column": 68
-            }
-          },
-          "type": "binary-expr",
-          "locations": [
-            {
-              "start": {
-                "line": 13,
-                "column": 12
-              },
-              "end": {
-                "line": 13,
-                "column": 28
-              }
-            },
-            {
-              "start": {
-                "line": 13,
-                "column": 32
-              },
-              "end": {
-                "line": 13,
-                "column": 68
-              }
-            }
-          ],
-          "line": 13
-        }
-      },
-      "s": {
-        "0": 1,
-        "1": 3,
-        "2": 3,
-        "3": 3,
-        "4": 3,
-        "5": 8,
-        "6": 2,
-        "7": 1,
-        "8": 1
-      },
-      "f": {
-        "0": 3
-      },
-      "b": {
-        "0": [
-          2,
-          6
-        ],
-        "1": [
-          8,
-          7
-        ]
-      },
-      "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-      "hash": "eebe39951c060d5e5bd630cb6b608e34b7b8e604"
-    },
-    "/Users/wangyuan/Desktop/hiker-coding/src/unionAndIntersect.js": {
-      "path": "/Users/wangyuan/Desktop/hiker-coding/src/unionAndIntersect.js",
-      "statementMap": {
-        "0": {
-          "start": {
-            "line": 7,
-            "column": 24
-          },
-          "end": {
-            "line": 28,
-            "column": 1
-          }
-        },
-        "1": {
-          "start": {
-            "line": 8,
-            "column": 18
-          },
-          "end": {
-            "line": 8,
-            "column": 50
-          }
-        },
-        "2": {
-          "start": {
-            "line": 9,
-            "column": 15
-          },
-          "end": {
-            "line": 9,
-            "column": 26
-          }
-        },
-        "3": {
-          "start": {
-            "line": 9,
-            "column": 35
-          },
-          "end": {
-            "line": 9,
-            "column": 46
-          }
-        },
-        "4": {
-          "start": {
-            "line": 10,
-            "column": 12
-          },
-          "end": {
-            "line": 10,
-            "column": 13
-          }
-        },
-        "5": {
-          "start": {
-            "line": 10,
-            "column": 19
-          },
-          "end": {
-            "line": 10,
-            "column": 20
-          }
-        },
-        "6": {
-          "start": {
-            "line": 11,
-            "column": 22
-          },
-          "end": {
-            "line": 11,
-            "column": 24
-          }
-        },
-        "7": {
-          "start": {
-            "line": 12,
-            "column": 4
-          },
-          "end": {
-            "line": 26,
-            "column": 5
-          }
-        },
-        "8": {
-          "start": {
-            "line": 13,
-            "column": 21
-          },
-          "end": {
-            "line": 13,
-            "column": 28
-          }
-        },
-        "9": {
-          "start": {
-            "line": 14,
-            "column": 21
-          },
-          "end": {
-            "line": 14,
-            "column": 28
-          }
-        },
-        "10": {
-          "start": {
-            "line": 15,
-            "column": 8
-          },
-          "end": {
-            "line": 25,
-            "column": 9
-          }
-        },
-        "11": {
-          "start": {
-            "line": 16,
-            "column": 12
-          },
-          "end": {
-            "line": 18,
-            "column": 13
-          }
-        },
-        "12": {
-          "start": {
-            "line": 17,
-            "column": 16
-          },
-          "end": {
-            "line": 17,
-            "column": 37
-          }
-        },
-        "13": {
-          "start": {
-            "line": 19,
-            "column": 12
-          },
-          "end": {
-            "line": 19,
-            "column": 16
-          }
-        },
-        "14": {
-          "start": {
-            "line": 20,
-            "column": 12
-          },
-          "end": {
-            "line": 20,
-            "column": 16
-          }
-        },
-        "15": {
-          "start": {
-            "line": 21,
-            "column": 15
-          },
-          "end": {
-            "line": 25,
-            "column": 9
-          }
-        },
-        "16": {
-          "start": {
-            "line": 22,
-            "column": 12
-          },
-          "end": {
-            "line": 22,
-            "column": 16
-          }
-        },
-        "17": {
-          "start": {
-            "line": 24,
-            "column": 12
-          },
-          "end": {
-            "line": 24,
-            "column": 16
-          }
-        },
-        "18": {
-          "start": {
-            "line": 27,
-            "column": 4
-          },
-          "end": {
-            "line": 27,
-            "column": 29
-          }
-        },
-        "19": {
-          "start": {
-            "line": 30,
-            "column": 0
-          },
-          "end": {
-            "line": 30,
-            "column": 35
-          }
-        }
-      },
-      "fnMap": {
-        "0": {
-          "name": "(anonymous_0)",
-          "decl": {
-            "start": {
-              "line": 7,
-              "column": 24
-            },
-            "end": {
-              "line": 7,
-              "column": 25
-            }
-          },
-          "loc": {
-            "start": {
-              "line": 7,
-              "column": 46
-            },
-            "end": {
-              "line": 28,
-              "column": 1
-            }
-          },
-          "line": 7
-        }
-      },
-      "branchMap": {
-        "0": {
-          "loc": {
-            "start": {
-              "line": 12,
-              "column": 11
-            },
-            "end": {
-              "line": 12,
-              "column": 31
-            }
-          },
-          "type": "binary-expr",
-          "locations": [
-            {
-              "start": {
-                "line": 12,
-                "column": 11
-              },
-              "end": {
-                "line": 12,
-                "column": 19
-              }
-            },
-            {
-              "start": {
-                "line": 12,
-                "column": 23
-              },
-              "end": {
-                "line": 12,
-                "column": 31
-              }
-            }
-          ],
-          "line": 12
-        },
-        "1": {
-          "loc": {
-            "start": {
-              "line": 15,
-              "column": 8
-            },
-            "end": {
-              "line": 25,
-              "column": 9
-            }
-          },
-          "type": "if",
-          "locations": [
-            {
-              "start": {
-                "line": 15,
-                "column": 8
-              },
-              "end": {
-                "line": 25,
-                "column": 9
-              }
-            },
-            {
-              "start": {
-                "line": 15,
-                "column": 8
-              },
-              "end": {
-                "line": 25,
-                "column": 9
-              }
-            }
-          ],
-          "line": 15
-        },
-        "2": {
-          "loc": {
-            "start": {
-              "line": 16,
-              "column": 12
-            },
-            "end": {
-              "line": 18,
-              "column": 13
-            }
-          },
-          "type": "if",
-          "locations": [
-            {
-              "start": {
-                "line": 16,
-                "column": 12
-              },
-              "end": {
-                "line": 18,
-                "column": 13
-              }
-            },
-            {
-              "start": {
-                "line": 16,
-                "column": 12
-              },
-              "end": {
-                "line": 18,
-                "column": 13
-              }
-            }
-          ],
-          "line": 16
-        },
-        "3": {
-          "loc": {
-            "start": {
-              "line": 16,
-              "column": 16
-            },
-            "end": {
-              "line": 16,
-              "column": 76
-            }
-          },
-          "type": "binary-expr",
-          "locations": [
-            {
-              "start": {
-                "line": 16,
-                "column": 16
-              },
-              "end": {
-                "line": 16,
-                "column": 33
-              }
-            },
-            {
-              "start": {
-                "line": 16,
-                "column": 37
-              },
-              "end": {
-                "line": 16,
-                "column": 76
-              }
-            }
-          ],
-          "line": 16
-        },
-        "4": {
-          "loc": {
-            "start": {
-              "line": 21,
-              "column": 15
-            },
-            "end": {
-              "line": 25,
-              "column": 9
-            }
-          },
-          "type": "if",
-          "locations": [
-            {
-              "start": {
-                "line": 21,
-                "column": 15
-              },
-              "end": {
-                "line": 25,
-                "column": 9
-              }
-            },
-            {
-              "start": {
-                "line": 21,
-                "column": 15
-              },
-              "end": {
-                "line": 25,
-                "column": 9
-              }
-            }
-          ],
-          "line": 21
-        }
-      },
-      "s": {
-        "0": 1,
-        "1": 1,
-        "2": 1,
-        "3": 1,
-        "4": 1,
-        "5": 1,
-        "6": 1,
-        "7": 1,
-        "8": 3,
-        "9": 3,
-        "10": 3,
-        "11": 2,
-        "12": 1,
-        "13": 2,
-        "14": 2,
-        "15": 1,
-        "16": 0,
-        "17": 1,
-        "18": 1,
-        "19": 1
-      },
-      "f": {
-        "0": 1
-      },
-      "b": {
-        "0": [
-          4,
-          4
-        ],
-        "1": [
-          2,
-          1
-        ],
-        "2": [
-          1,
-          1
-        ],
-        "3": [
-          2,
-          1
-        ],
-        "4": [
-          0,
-          1
-        ]
-      },
-      "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-      "hash": "8d8b18026a42673c177b2f3e4fe8149b213471f3"
-    }
-  }
+  "wasInterrupted": false
 }

@@ -1,4 +1,4 @@
-const isRotateEqual = require('../src/isRotateEqual');
+import isRotateEqual from '../../src/leetcode/isRotateEqual';
 
 describe('isRotateEqual:算法：给你一个纯数字字符串，判断旋转180度之后是否和自己相等', () => {
     const cases = [

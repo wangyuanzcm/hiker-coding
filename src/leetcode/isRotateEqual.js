@@ -2,7 +2,7 @@
  * 算法：给你一个纯数字字符串，判断旋转180度之后是否和自己相等
  * @param {string} str
  */
-var isRotateEqual = function (str) {
+const isRotateEqual = (str) => {
     let map = new Map([
         ['0', '0'],
         ['1', '1'],
@@ -16,5 +16,4 @@ var isRotateEqual = function (str) {
     }
     return true;
 };
-
-module.exports = isRotateEqual;
+export default isRotateEqual;

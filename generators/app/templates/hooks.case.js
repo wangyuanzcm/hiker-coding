@@ -4,8 +4,10 @@
  * <%- information -%>
 <% }); %>
  */ 
-var <%= funcName %> = function(params) {
+import { useEffect, useRef } from 'react';
+
+const <%= funcName %> = (params)=> {
 
 };
 
-module.exports = <%= funcName %>;
+export default <%= funcName %>;

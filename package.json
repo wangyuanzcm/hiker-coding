@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generator:test": "node ./scripts/generator-test",
-    "test": "jest --coverage"
+    "generator": "node ./scripts/generator",
+    "test": "jest",
+    "majestic": "majestic"
   },
   "repository": {
     "type": "git",
@@ -22,39 +23,21 @@
     "@types/jest": "^26.0.23",
     "jest": "^27.0.4",
     "jest-stare": "^2.2.2",
+    "react": "^16.14.0",
     "ts-jest": "^27.0.3",
     "typescript": "^4.3.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "@testing-library/react-hooks": "^7.0.0",
+    "babel-jest": "^27.0.2",
+    "babel-plugin-transform-async-to-promises": "^0.8.15",
     "camelcase": "^6.2.0",
     "majestic": "^1.8.0",
+    "react-test-renderer": "^16.14.0",
     "yeoman-environment": "^3.4.1",
     "yeoman-generator": "^5.3.0"
-  },
-  "jest": {
-    "preset": "ts-jest/presets/js-with-babel",
-    "testEnvironment": "node",
-    "testMatch": [
-      "**/tests/**/*.[jt]s?(x)",
-      "**/?(*.)+(spec|test).[tj]s?(x)"
-    ],
-    "coverageDirectory":"<rootDir>/dist/coverage",
-    "reporters": [
-      "default",
-      [
-        "jest-stare",
-        {
-          "resultDir": "dist/jest-stare",
-          "reportTitle": "jest-stare!",
-          "additionalResultsProcessors": [
-            "jest-junit"
-          ],
-          "coverageLink": "../coverage/lcov-report/index.html",
-          "jestStareConfigJson": "jest-stare.json",
-          "jestGlobalConfigJson": "globalStuff.json"
-        }
-      ]
-    ]
-
   }
 }
