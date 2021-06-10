@@ -1,0 +1,18 @@
+query {
+  summary {
+    numPassedTests
+    numFailedTests
+    numPassedTestSuites
+    numFailedTestSuites
+    failedTests
+    executingTests
+    passingTests
+    coverage {
+      statement
+      function
+      branch
+      line
+    }
+    haveCoverageReport
+  }
+}

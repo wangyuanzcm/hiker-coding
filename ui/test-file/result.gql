@@ -1,0 +1,21 @@
+query Results($path: String!) {
+  result(path: $path) {
+    path
+    numFailingTests
+    numPassingTests
+    failureMessage
+    testResults {
+      title
+      numPassingAsserts
+      status
+      failureMessages
+      ancestorTitles
+      duration
+    }
+    consoleLogs {
+      message
+      type
+      origin
+    }
+  }
+}

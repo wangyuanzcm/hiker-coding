@@ -1,0 +1,11 @@
+subscription($path: String!) {
+  fileChange(path: $path) {
+    items {
+      id
+      name
+      type
+      parent
+      only
+    }
+  }
+}

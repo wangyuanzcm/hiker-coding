@@ -16,20 +16,20 @@ module.exports = {
   //   "**/?(*.)+(spec|test).[tj]s?(x)"
   // ],
   "coverageDirectory": "<rootDir>/dist/coverage",
-  "reporters": [
-    "default",
-    [
-      "jest-stare",
-      {
-        "resultDir": "dist/jest-stare",
-        "reportTitle": "jest-stare!",
-        "additionalResultsProcessors": [
-          "jest-junit"
-        ],
-        "coverageLink": "../coverage/lcov-report/index.html",
-        "jestStareConfigJson": "jest-stare.json",
-        "jestGlobalConfigJson": "globalStuff.json"
-      }
-    ]
-  ]
+  // "reporters": [
+  //   "default",
+  //   [
+  //     "jest-stare",
+  //     {
+  //       "resultDir": "dist/jest-stare",
+  //       "reportTitle": "jest-stare!",
+  //       "additionalResultsProcessors": [
+  //         "jest-junit"
+  //       ],
+  //       "coverageLink": "../coverage/lcov-report/index.html",
+  //       "jestStareConfigJson": "jest-stare.json",
+  //       "jestGlobalConfigJson": "globalStuff.json"
+  //     }
+  //   ]
+  // ]
 }

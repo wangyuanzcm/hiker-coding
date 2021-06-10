@@ -1,0 +1,11 @@
+query FileItems($path: String!) {
+  file(path: $path) {
+    items {
+      id
+      name
+      type
+      parent
+      only
+    }
+  }
+}

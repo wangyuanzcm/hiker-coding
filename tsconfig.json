@@ -14,7 +14,17 @@
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "declaration": false,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "module": "es2015",
+    "lib": ["es6", "dom", "es2017.object"],
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": false,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "exclude": ["node_modules", "lib", "es", "dist", "**/__tests__", "**/__test__", "**/demo"]
 }

@@ -1,0 +1,7 @@
+subscription {
+  runnerStatusChange {
+    running
+    activeFile
+    watching
+  }
+}

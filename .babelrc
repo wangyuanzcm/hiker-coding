@@ -1,17 +1,19 @@
 {
   "presets": [
+    "@babel/preset-react",
     [
-      "@babel/env",
+      "@babel/preset-typescript",
       {
-        "loose": true,
-        "modules": false
+        "isTSX": true,
+        "allExtensions": true
       }
     ],
-    "@babel/react"
+    "@babel/preset-env"
   ],
-  "include": ["**/*.js","**/*.spec.js"],
-  "exclude": "**/*.ts",
   "plugins": [
-    "babel-plugin-transform-async-to-promises"
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "@babel/plugin-proposal-object-rest-spread",
+    "babel-plugin-styled-components"
   ]
 }

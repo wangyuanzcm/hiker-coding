@@ -17,6 +17,7 @@ describe('isHappy:编写一个算法来判断一个数 n 是不是快乐数。',
         },
     ];
 
+
     test.each(cases)(`isHappy:inputs is $inputs,result should be $result`, ({ inputs, result }) => {
         expect(isHappy(...inputs)).toEqual(result)
     })
