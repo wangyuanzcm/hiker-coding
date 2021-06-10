@@ -1,4 +1,4 @@
-import <%= funcName %> import '../../src/leetcode/<%= caseName %>';
+import <%= funcName %> from '../../src/leetcode/<%= caseName %>';
 
 describe('<%= funcName %>:<%= description %>', () => {
 
