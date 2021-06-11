@@ -208,7 +208,7 @@ export default class JestManager {
   }
 
   setTimeoutPromisify(fn: () => void, delay: number) {
-    return new Promise(resolve => {
+    return new Promise<void>(resolve => {
       setTimeout(() => {
         fn();
         resolve();
