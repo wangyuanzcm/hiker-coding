@@ -8,7 +8,8 @@ import RUNFILE from "./run-file.gql";
 import UPDATE_SNAPSHOT from "./update-snapshot.gql";
 import FILERESULTSUB from "./subscription.gql";
 import RESULT from "./result.gql";
-import Test from "./test-item";
+// import Test from "./test-item";
+import Test from "./test-item-browser";
 import { transform } from "./transformer";
 import useSubscription from "./use-subscription";
 import FileSummary from "./summary";
@@ -18,6 +19,13 @@ import ConsolePanel from "./console-panel";
 import ErrorPanel from "./error-panel";
 import useKeys, { hasKeys } from "../hooks/use-keys";
 
+import { describe, it, expect, run } from "jest-lite";
+import AceEditor from "react-ace";
+import "ace-builds/src-noconflict/mode-java";
+import "ace-builds/src-noconflict/theme-github";
+function onChange(newValue) {
+  console.log("change", newValue);
+}
 const Container = styled.div<any>`
   ${space};
   ${color};
@@ -55,7 +63,6 @@ function TestFile({ selectedFilePath, isRunning, projectRoot, onStop }: Props) {
     result => result.file,
     result => result.fileChange
   );
-
   const suiteCount = ((fileItemResult && fileItemResult.items) || []).filter(
     fileItem => fileItem.type === "describe"
   ).length;
@@ -93,7 +100,7 @@ function TestFile({ selectedFilePath, isRunning, projectRoot, onStop }: Props) {
     result => result.changeToResult
   );
 
-  const isUpdating = isRunning && (result ===  null ||(result.numPassingTests === 0 && result.numFailingTests === 0));
+  const isUpdating = isRunning && (result === null || (result.numPassingTests === 0 && result.numFailingTests === 0));
 
   const roots = (fileItemResult.items || []).filter(
     item => item.parent === null
@@ -123,7 +130,16 @@ function TestFile({ selectedFilePath, isRunning, projectRoot, onStop }: Props) {
           updateSnapshot();
         }}
       />
+
       <Content dim={isUpdating}>
+        <AceEditor
+          mode="java"
+          theme="github"
+          onChange={onChange}
+          name="UNIQUE_ID_OF_DIV"
+          editorProps={{ $blockScrolling: true }}
+        />
+
         {result && result.testResults && result.testResults.length === 0 && (
           <ErrorPanel failureMessage={result && result.failureMessage} />
         )}

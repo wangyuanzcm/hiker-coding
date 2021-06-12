@@ -166,7 +166,7 @@ export default function TestExplorer ({
   return (
     <Container p={4} bg="veryDark" color="text">
       <Logo />
-      <ActionsPanel mb={4}>
+      {/* <ActionsPanel mb={4}>
         <Tooltip title="Run all tests" position="bottom" size="small">
           <Button
             icon={isRunning ? <StopCircle size={15} /> : <Play size={15} />}
@@ -224,8 +224,8 @@ export default function TestExplorer ({
             </Button>
           </Tooltip>
         </RightActionPanel>
-      </ActionsPanel>
-      <Summary summary={summary} />
+      </ActionsPanel> */}
+      {/* <Summary summary={summary} /> */}
       <FileHeader mt={4} mb={3}>
         <FilesHeader>Tests</FilesHeader>
         <RightFilesAction>
@@ -294,6 +294,16 @@ export default function TestExplorer ({
               }}
             >
               <RefreshCw size={10} />
+            </Button>
+          </Tooltip>
+          <Tooltip title="Search test files" position="bottom" size="small">
+            <Button
+              minimal
+              onClick={() => {
+                onSearchOpen();
+              }}
+            >
+              <Search size={14} />
             </Button>
           </Tooltip>
         </RightFilesAction>

@@ -64,7 +64,6 @@ export default class Project {
         parentPath = currentPath;
       });
     });
-
     return map;
   }
 }

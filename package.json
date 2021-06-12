@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --env.development --config ./scripts/webpack.ui.config.js",
     "server": "ts-node --project ./tsconfig.server.json ./server/index.ts",
     "generator": "node ./scripts/generator",
-    "test": "jest",
+    "test": "jest --coverage",
     "majestic": "majestic"
   },
   "repository": {
@@ -34,13 +34,14 @@
     "graphql-yoga": "^1.16.1",
     "jest": "^27.0.4",
     "jest-each-table": "^1.1.0",
+    "node-fetch": "^2.3.0",
+    "open": "^6.0.0",
     "react": "^16.8.3",
+    "react-ace": "^9.4.1",
     "react-apollo": "^2.5.8",
     "react-apollo-hooks": "^0.2.1",
     "react-dom": "^16.8.3",
     "read-pkg-up": "^4.0.0",
-    "node-fetch": "^2.3.0",
-    "open": "^6.0.0",
     "ts-jest": "^27.0.3"
   },
   "devDependencies": {
@@ -56,6 +57,7 @@
     "@babel/preset-typescript": "^7.0.0",
     "@babel/traverse": "^7.2.3",
     "@testing-library/react-hooks": "^7.0.0",
+    "@types/styled-system": "^5.1.11",
     "babel-jest": "^27.0.2",
     "babel-loader": "^8.0.2",
     "babel-plugin-styled-components": "^1.12.0",

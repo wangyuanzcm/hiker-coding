@@ -15,7 +15,6 @@ export async function inspect(path: string): Promise<TestItem[]> {
         if (err) {
           reject(err);
         }
-
         let ast;
         try {
           ast = parse(path, code);
@@ -23,8 +22,8 @@ export async function inspect(path: string): Promise<TestItem[]> {
           reject(e);
         }
 
-        const result: TestItem[] = [];
 
+        const result: TestItem[] = [];
         traverse(ast, {
           CallExpression(path: any) {
             if (path.scope.block.type === "Program") {
@@ -79,7 +78,7 @@ function findItems(path: any, result: TestItem[], parentId?: any) {
     path.node.callee.property.name === "todo"
   ) {
     type = "todo";
-  } else {
+  }else {
     type = path.node.callee.name;
   }
 
@@ -127,7 +126,7 @@ function findItems(path: any, result: TestItem[], parentId?: any) {
         parent: parentId
       });
     }
-  } else if (type === "todo") {
+  }else if (type === "todo") {
     if (path.node.arguments[0].type === "TemplateLiteral") {
       result.push({
         id: nanoid(),

@@ -4,14 +4,14 @@ import logo from "../assets/logo.png";
 
 const Container = styled.div`
   font-size: 25px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 15px;
 `;
 
 export default function Logo() {
   return (
     <Container>
-      <img width={200} src={logo} />
+      手写代码在线复习
     </Container>
   );
 }
