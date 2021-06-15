@@ -13,6 +13,15 @@ module.exports = env => ({
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   devServer: {
+    before(app) {
+      require('mocker-api')(app, path.resolve('./mock/index.js'), {
+        //这里可以直接代理到github到api接口上面去
+        // proxy: {
+        //   '/repos/(.*)': 'https://api.github.com/',
+        // },
+        // changeHost: true,
+      })
+    },
     contentBase: path.resolve(__dirname, '../dist/ui'),
     hot: true,
     port: 9000,
