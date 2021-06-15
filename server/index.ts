@@ -4,11 +4,7 @@ import { getSchema } from "./api";
 import resultHandlerApi from "./services/result-handler-api";
 import getPort from "get-port";
 import * as parseArgs from "minimist";
-import * as chromeLauncher from "chrome-launcher";
-import * as opn from "open";
 import "consola";
-import { initializeStaticRoutes } from "./static-files";
-import { root } from "./services/cli";
 import * as readPkgUp from "read-pkg-up";
 
 const pkg = readPkgUp.sync({
@@ -48,15 +44,6 @@ async function main() {
       async () => {
         const url = `http://localhost:${port}`;
         console.log(`⚡  Majestic v${pkg.version} is running at ${url} `);
-
-        if (args.app) {
-          await chromeLauncher.launch({
-            startingUrl: url,
-            chromeFlags: [`--app=${url}`]
-          });
-        } else if (!args.noOpen) {
-          opn(url);
-        }
       }
     );
   } catch (e) {
