@@ -1,4 +1,4 @@
-import <%= funcName %> from '../../src/leetcode/<%= caseName %>';
+import <%= funcName.split('/').pop() %> from '../../src/leetcode/<%= caseName %>';
 
 describe('<%= funcName %>:<%= description %>', () => {
 
@@ -10,6 +10,6 @@ describe('<%= funcName %>:<%= description %>', () => {
     ];
 
     test.each(cases)(`<%= funcName %>:inputs is $inputs,result should be $result`, ({ inputs, result }) => {
-        expect(<%= funcName %>(...inputs)).toEqual(result)
+        expect(<%= funcName.split('/').pop() %>(...inputs)).toEqual(result)
     })
 });

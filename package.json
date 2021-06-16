@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --env.development --config ./scripts/webpack.ui.config.js",
     "server": "ts-node --project ./tsconfig.server.json ./server/index.ts",
     "generator": "node ./scripts/generator",
-    "test": "jest --coverage",
+    "test": "jest",
     "majestic": "majestic"
   },
   "repository": {

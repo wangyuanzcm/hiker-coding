@@ -4,8 +4,8 @@
  * <%- information -%>
 <% }); %>
  */ 
-const <%= funcName %> = (params) =>{
+const <%= funcName.split('/').pop() %> = (params) =>{
 
 };
 
-export default <%= funcName %>;
+export default <%= funcName.split('/').pop() %>;
