@@ -23,6 +23,5 @@ describe('linkedList/designLinkedList:707. 设计链表', () => {
         linkedList.deleteAtIndex(1);  //现在链表是1-> 3
         expect(linkedList.data).toEqual(generatorSinglyLinkedList(result[5]))
         expect(linkedList.get(1)).toEqual(result[6])
-
     })
 });
