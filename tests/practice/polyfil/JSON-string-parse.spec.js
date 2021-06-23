@@ -1,4 +1,4 @@
-import { jsonStringify, jsonParse } from '../../src/polyfil/JSON-string-parse';
+import { jsonStringify, jsonParse } from '../../../src/practice/polyfil/JSON-string-parse';
 
 describe('jsonStringParse:手写一个JSON.stringify和JSON.parse', () => {
     test(`jsonStringParse:测试stringify的结果`, () => {

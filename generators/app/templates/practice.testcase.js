@@ -1,4 +1,4 @@
-import <%= funcName.split('/').pop() %> from '../../src/polyfil/<%= caseName %>';
+import <%= funcName.split('/').pop() %> from '../../src/practice/<%= caseName %>';
 
 describe('<%= funcName %>:<%= description %>', () => {
     const cases = [

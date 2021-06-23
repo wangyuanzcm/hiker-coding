@@ -1,4 +1,4 @@
-import myNew from '../../src/polyfil/MyNew';
+import myNew from '../../../src/practice/polyfil/MyNew';
 
 describe('myNew:手写实现new操作符', () => {
     function Person(name, age) {

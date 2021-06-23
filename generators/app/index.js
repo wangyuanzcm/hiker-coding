@@ -40,7 +40,7 @@ module.exports = class extends Generator {
       },
       {
         type: "list",
-        choices: [{name:"React Hooks",value:"hooks"},{name:"Tools Function",value:"tools"},{name:"Polyfil Function",value:"polyfil"},{name:"leetcode",value:"leetcode"}],
+        choices: [{name:"React Hooks",value:"hooks"},{name:"Practice Function",value:"practice"},{name:"leetcode",value:"leetcode"}],
         name: "type",
         default: "leetcode"
       },

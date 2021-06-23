@@ -1,4 +1,4 @@
-import MyPromise from '../../src/polyfil/MyPromise'
+import MyPromise from '../../../src/practice/polyfil/MyPromise'
 
 describe('polyfil/myPromise:手写Promise A+规范代码', () => {
     test(`polyfil/myPromise:在setTimeOut中去resolve`, () => {
