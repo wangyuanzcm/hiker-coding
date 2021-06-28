@@ -39,27 +39,7 @@ function promiseResolution(promise2, x, resolve, reject) {
   }
 }
 class MyPromise {
-  static all(promiseArray) {
-    return new MyPromise((resolve, reject) => {
-      const resultArray = [];
-      let successTimes = 0;
-      function processResult(index, data) {
-        resultArray[index] = data;
-        successTimes++;
-        if (successTimes === promiseArray.length) {
-          resolve(resultArray);
-        }
-      }
-      for (let i = 0; i < promiseArray.length; i++) {
-        promiseArray[i].then(
-          (data) => {
-            processResult(i, data);
-          },
-          (err) => reject(err)
-        );
-      }
-    });
-  }
+
   constructor(fn) {
     this.state = PENDING;
     this.resolveCallbacks = [];
@@ -136,6 +116,90 @@ class MyPromise {
   }
   catch(onRejected) {
     return this.then(null, onRejected);
+  }
+  /**
+   * 实现 resolve 静态方法有三个要点:
+   * 1. 传参为一个 Promise, 则直接返回它。
+   * 2. 传参为一个 thenable 对象，返回的 Promise 会跟随这个对象，采用它的最终状态作为自己的状态。
+   * 3. 其他情况，直接返回以该值为成功状态的promise对象。
+   */
+  static resolve(params){
+    if(params instanceof Promise) return params;
+    return new Promise((resolve, reject) => {
+      if(params&&params.then&&typeof params.then === 'function'){
+        params.then(resolve, reject);
+      }else{
+        resolve(params);
+      }
+    })
+  }
+  /**
+   * Promise.reject 中传入的参数会作为一个 reason 原封不动地往下传, 实现如下:
+   */
+  static reject(reason){
+    return new Promise((resolve, reject) => {
+      reject(reason);
+    })
+  }
+  /**
+   * 无论当前 Promise 是成功还是失败，调用finally之后都会执行 finally 中传入的函数，并且将值原封不动的往下传。
+   */
+  static finally(callback){
+    this.then((value)=>{
+      return Promise.resolve(callback()).then(() =>value);
+    },err =>{
+      return Promise.resolve(callback()).then(() =>err);
+    })
+  }
+  /**
+   * 对于 all 方法而言，需要完成下面的核心功能:
+   * 1. 传入参数为一个空的可迭代对象，则直接进行resolve。
+   * 2. 如果参数中有一个promise失败，那么Promise.all返回的promise对象失败。
+   * 3. 在任何情况下，Promise.all 返回的 promise 的完成状态的结果都是一个数组
+   **/
+  static all(promiseArray) {
+    return new MyPromise((resolve, reject) => {
+      const resultArray = [];
+      if(promiseArray.length === 0){
+        resolve(resultArray);
+        return;
+      }
+      let successTimes = 0;
+      function processResult(index, data) {
+        resultArray[index] = data;
+        successTimes++;
+        if (successTimes === promiseArray.length) {
+          resolve(resultArray);
+        }
+      }
+      for (let i = 0; i < promiseArray.length; i++) {
+        // 为什么不直接 promise[i].then, 因为promise[i]可能不是一个promise
+        Promise.resolve(promiseArray[i]).then(
+          (data) => {
+            processResult(i, data);
+          },
+          (err) => reject(err)
+        );
+      }
+    });
+  }
+  /**
+   * race 的实现相比之下就简单一些，只要有一个 promise 执行完，直接 resolve 并停止执行。
+   */
+  static race(promises){
+    return new Promise((resolve, reject) =>{
+      let len = promises.length;
+      if(len === 0) return;
+      for(let i =0;i<len;i++){
+        Promise.resolve(promises[i]).then((data)=>{
+          resolve(data);
+          return;
+        }).catch(err =>{
+          reject(err);
+          return;
+        })
+      }
+    })
   }
 }
 

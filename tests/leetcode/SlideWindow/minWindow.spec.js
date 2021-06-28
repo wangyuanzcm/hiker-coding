@@ -1,4 +1,4 @@
-import minWindow from '../../src/leetcode/minWindow';
+import minWindow from '../../../src/leetcode/SlideWindow/minWindow';
 
 describe('minWindow:最小覆盖子串', () => {
 

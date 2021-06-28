@@ -1,4 +1,4 @@
-import lengthOfLongestSubstring from '../../src/leetcode/lengthOfLongestSubstring';
+import lengthOfLongestSubstring from '../../../src/leetcode/SlideWindow/lengthOfLongestSubstring';
 
 describe('lengthOfLongestSubstring:3. 无重复字符的最长子串', () => {
 

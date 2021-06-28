@@ -8,10 +8,11 @@ function ListNode(val, next) {
  * 链表中节点数目为 n
  * 1 <= n <= 500
  * -500 <= Node.val <= 500
- * @param {*} list 
- * @returns 
+ * @param {array} list 
+ * @param {number} cycleIndex -1:代表链表中没有环，其他正数则代表环的位置
+ * @returns LinkedList
  */
-const generatorSinglyLinkedList = (list)=>{
+const generatorSinglyLinkedList = (list,cycleIndex=-1)=>{
     if(!list.length) return null;
     let dummy = new ListNode();
     let cur = dummy;
@@ -19,6 +20,15 @@ const generatorSinglyLinkedList = (list)=>{
         let node = new ListNode(list[i]);
         cur.next = node;
         cur = cur.next;
+    }
+    if(cycleIndex !== -1){
+        let i=0;
+        let pointer = dummy.next;
+        while(i<cycleIndex){
+            pointer = pointer.next;
+            i++;
+        }
+        cur.next = pointer;
     }
     return dummy.next;
 }
