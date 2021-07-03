@@ -35,9 +35,28 @@ const link = split(
   httpLink
 );
 
+// import ApolloClient from 'apollo-client'
+// import { ApolloLink } from "apollo-link";
+// import { createHttpLink } from 'apollo-link-http';
+// import { InMemoryCache } from "apollo-cache-inmemory";
+// let TOKEN = null
+// const httpLink = createHttpLink({ uri: "https://api.github.com/graphql" });
+// const middlewareLink = new ApolloLink((operation, forward) => {
+//   operation.setContext({
+//     headers: {
+//       authorization: `Bearer ${TOKEN}`
+//     }
+//   });
+//   return forward(operation);
+// });
+ 
+// // use with apollo-client
+// const link = middlewareLink.concat(httpLink);
+
 const client = new ApolloClient({
   link,
   cache: new InMemoryCache()
-});
+
+})
 
 export default client;

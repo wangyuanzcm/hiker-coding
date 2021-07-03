@@ -53,7 +53,7 @@ export default function App() {
     data: { workspace },
     refetch: refetchFiles
   } = useQuery<WorkspaceResult>(WORKSPACE);
-
+  console.log(workspace,"workspace")
   const { data: summary }: { data: Summary } = useSubscription(
     SUMMARY_QUERY,
     SUMMARY_SUBS,

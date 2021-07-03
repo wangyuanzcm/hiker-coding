@@ -15,6 +15,23 @@ https://api.github.com/repos/wangyuanzcm/hiker-coding/contents/tests?ref=main
 
 github提供了 GraphQL的接口，所以可以无缝接入这个平台https://docs.github.com/en/graphql
 
+v4 :
+query content {
+  repository(name: "hiker-coding", owner: "wangyuanzcm") {
+    object(expression: "HEAD:tests") {
+      ... on Tree {
+        entries {
+          name
+          extension
+          path
+        }
+      }
+    }
+  }
+}
+
+
+
 todos:
 1. 改造页面，
     * jest-lite实现浏览器端运行测试用例，测试的代码为当前显示的代码

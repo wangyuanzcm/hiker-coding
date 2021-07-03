@@ -5,6 +5,7 @@ module.exports = {
     'ts-jest': {
       tsConfig: 'tsconfig.json',
     },
+
   },
   // "transformIgnorePatterns": [`<rootdir>/node_modules/(?!${esModules})`],
   // "transform": {
