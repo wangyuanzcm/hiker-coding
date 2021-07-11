@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks'
-import useDeepCompareEffect from '../../src/hooks/useDeepCompareEffect';
+import useDeepCompareEffect from '../useDeepCompareEffect';
 import { useEffect } from 'react';
 
 let options = { max: 10 };
