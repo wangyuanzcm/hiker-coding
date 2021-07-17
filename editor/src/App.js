@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useRef, useState,useEffect } from "react";
 import { UnControlled as CodeMirror } from "react-codemirror2";
 import "codemirror/lib/codemirror.js";
 import "codemirror/lib/codemirror.css";
@@ -103,13 +103,21 @@ let templateCode = (parsed) => {
   res.initCode = createInitCode(typeInfo, fnName, parameters);
   return res;
 }
+const parsed = parse(initCode);
+// const stringified = parsed.map((block) => stringify(block));
+// initCode = initCode.replace(stringified, "");//参考答案
+const Demo = templateCode(parsed);
 function App() {
-  const parsed = parse(initCode);
-  // const stringified = parsed.map((block) => stringify(block));
-  // initCode = initCode.replace(stringified, "");//参考答案
-  const Demo = templateCode(parsed);
-  const [code, setCode] = useState(Demo.initCode);
-  const [testHtml, setTestHtml] = useState('')
+  const [code, setCode] = useState('');
+  const [testHtml, setTestHtml] = useState('');
+  let instance = useRef();
+  useEffect(()=>{
+    const parsed = parse(initCode);
+    // const stringified = parsed.map((block) => stringify(block));
+    // initCode = initCode.replace(stringified, "");//参考答案
+    const Demo = templateCode(parsed);
+    setCode(Demo.initCode);
+  },[])
   const handleRun = () => {
     const worker = new Worker('http://localhost:3000/worker.js');
     worker.postMessage({ codeBlock: code + testCode })
@@ -134,6 +142,7 @@ function App() {
         </header>
         <div className="editor shorter">
           <CodeMirror
+            // editorDidMount={editor => { instance = editor }}
             value={code}
             options={{
               mode: { 
@@ -176,8 +185,8 @@ function App() {
             onBeforeChange={(editor, data, value) => {
               // setCode(value);
             }}
-            onChange={(editor, data, value) => {
-              // setCode(value);
+            onChange={(editor, data, value)=>{
+              setCode(value);
             }}
           />
         </div>

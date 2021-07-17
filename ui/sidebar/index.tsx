@@ -225,7 +225,7 @@ export default function TestExplorer ({
           </Tooltip>
         </RightActionPanel>
       </ActionsPanel> */}
-      {/* <Summary summary={summary} /> */}
+      <Summary summary={summary} />
       <FileHeader mt={4} mb={3}>
         <FilesHeader>Tests</FilesHeader>
         <RightFilesAction>

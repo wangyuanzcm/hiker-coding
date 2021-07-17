@@ -1,10 +1,10 @@
 import { GraphQLServer } from "graphql-yoga";
-import "reflect-metadata";
+import "reflect-metadata";//用来在声明的时候添加和读取元数据
 import { getSchema } from "./api";
 import resultHandlerApi from "./services/result-handler-api";
 import getPort from "get-port";
 import * as parseArgs from "minimist";
-import "consola";
+import "consola";//控制器日志输出
 import * as readPkgUp from "read-pkg-up";
 
 const pkg = readPkgUp.sync({

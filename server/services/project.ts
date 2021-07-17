@@ -27,7 +27,7 @@ export default class Project {
         }
       }
     );
-
+    console.log(configProcess,"configProcess")
     const filesStr = configProcess.stdout.toString().trim();
     const files: string[] = JSON.parse(filesStr);
     log("Identified test files: ", files);
