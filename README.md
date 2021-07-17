@@ -91,3 +91,6 @@ TODO：
 3. 认证之后可以避免垃圾输入和一些不良的言论出现。
 
 与github账号绑定仅仅是用于在项目中保存issue需要，不存在其他的用途
+
+
+https://apollographqlcn.github.io/react-docs-cn/queries.html 中文文档
