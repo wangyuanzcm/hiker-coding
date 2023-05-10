@@ -2,6 +2,9 @@ var yeoman = require('yeoman-environment');
 var path = require('path');
 var env = yeoman.createEnv();
 
+// The #lookup() method will search the user computer for installed generators
+// The search if done from the current working directory
+env.lookup();
 //generator-XXX模块地址查询
 // var generatorPath = require.resolve('generator-XXX','XXX:app');
 
@@ -15,3 +18,6 @@ env.register(generatorPath, 'generator:jest');
 env.run('generator:jest', {'skip-install': true}, function (err) {
     console.log('done');
 });
+
+
+
