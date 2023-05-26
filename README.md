@@ -100,3 +100,17 @@ https://apollographqlcn.github.io/react-docs-cn/queries.html 中文文档
   项目配置：
   1. npm依赖包升级，当项目重新启动的时候，很多依赖包跟环境不匹配，这个时候需要升级依赖包
     方法：npm outdated，详见https://www.freecodecamp.org/chinese/news/how-to-update-npm-dependencies/
+
+预期目标：
+1. 线上编辑代码，线上运行测试用例
+2. 接入github第三方认证
+3. 自动生成测试用例及初始化文件
+
+packages
+- website
+- questions
+
+type-challenges
+https://github.com/yihong0618/gitblog/issues/205
+https://github.com/gladmo/leetcode
+背单词
